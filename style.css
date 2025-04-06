@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ), url('Imagenes/expensive-golden-ring-with-human-hand-stand-display.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Menú */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo img {
+  width: 287px;
+  height: 116px;
+  object-fit: contain; /* Asegura que la imagen se escale bien */
+}
+
+.menu .navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar ul li a {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ce967b; /* color dorado suave al pasar el mouse */
+}
+
+
+/* Menú responsivo */
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+/* Contenido del header */
+.header-content {
+  text-align: center;
+  width: 100%;
+}
+
+.header-content h1 {
+  font-size: 75px;
+  line-height: 80px;
+  color: #f9fafc;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.header-content p {
+  font-size: 16px;
+  color: #c5c5c5;
+  padding: 0 250px;
+  margin-bottom: 25px;
+}
+
+/* Botón */
+.btn-1 {
+  display: inline-block;
+  padding: 11px 35px;
+  background-color: #ab876d;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-1:hover {
+  background-color: #d6c0b3;
+}
+
+/* Sección Joyería */
+.joyeria {
+  padding: 100px 0;
+  background-color: #e1e2e6;
+  position: relative;
+  text-align: center;
+}
+
+.joyeria-img {
+  width: 100%;
+  max-width: 2617px;
+  height: auto;
+  aspect-ratio: 2617 / 1745;
+  display: block;
+  margin: 0 auto;
+}
+
+.joyeria-content h2 {
+  font-size: 55px;
+  line-height: 70px;
+  color: #323337;
+  text-transform: uppercase;
+  padding: 0 250px;
+  margin-bottom: 15px;
+}
+
+.txt-p {
+  font-size: 16px;
+  color: #323337;
+  padding: 0 250px;
+  margin-bottom: 35px;
+}
+
+.joyeria-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.joyeria-item {
+  width: 30%;
+  text-align: center;
+}
+
+.joyeria-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu .navbar ul {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  #menu:checked ~ .navbar ul {
+    display: flex;
+  }
+
+  .menu label {
+    display: block;
+  }
+
+  .header-content p {
+    padding: 0 20px;
+  }
+
+  .header-content h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .joyeria-content h2,
+  .txt-p {
+    padding: 0 20px;
+  }
+
+  .joyeria-item {
+    width: 100%;
+  }
+}
+
+
+.servicios-group {
+  display: flex;
+  justify-content: space-between; /* imagen izquierda, centro y derecha */
+  align-items: center;
+  flex-wrap: wrap; /* para responsive */
+  padding: 40px 0;
+}
+
+.servicio {
+  width: 30%;
+  text-align: center;
+}
+
+.servicio img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+.btn-1 {
+  display: inline-block;
+  padding: 11px 35px;
+  background-color: #ab876d;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-1:hover {
+  background-color: #d6c0b3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicios-group {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .servicio {
+    width: 100%;
+  }
+}
+
+.blog {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 55px;
+  color: #323337;
+  margin-bottom: 40px;
+}
+
+.blog-content {
+  display: flex;
+  justify-content: space-between; /* izquierda, centro y derecha */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blog-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ab876d;
+}
+
+.blog-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+
+.general {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.general-item {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.general-img {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.general-2 {
+  background-image: url('Imagenes/TU_IMAGEN_1.jpg'); /* cambia por tu imagen */
+}
+
+.general-3 {
+  background-image: url('Imagenes/TU_IMAGEN_2.jpg'); /* cambia por tu imagen */
+}
+
+.general-text h2 {
+  font-size: 36px;
+  color: #323337;
+  margin-bottom: 15px;
+}
+
+.general-text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.servicios-content,
+.joyeria-content,
+.blog,
+.general {
+  text-align: center;
+}
+
+.servicios h2,
+.joyeria h2,
+.blog-title,
+.general-text h2 {
+  margin-bottom: 20px;
+  color: #323337;
+}
+
+.servicios p,
+.joyeria p,
+.general p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.servicios-group,
+.joyeria-group,
+.blog-content {
+  display: flex;
+  justify-content: space-evenly; /* o space-around o center si lo prefieres */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.btn-1 {
+  margin: 0 auto;
+}
+
+.servicio,
+.joyeria-item,
+.blog-item {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .servicio,
+  .joyeria-item,
+  .blog-item {
+    width: 100%;
+  }
+}
+
+
+
